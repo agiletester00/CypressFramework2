@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-01-11T07:01:01.722Z",
+    "end": "2025-01-11T07:01:09.130Z",
+    "duration": 7408,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9b0a4c5e-273c-49a1-999d-208595069304",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\iframes.js",
+      "file": "cypress\\integration\\examples\\iframes.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b9d6a89c-8859-4184-a490-37b12582b127",
+          "title": "This is my first suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Frames",
+              "fullTitle": "This is my first suite Frames",
+              "timedOut": null,
+              "duration": 4260,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#courses-iframe').its('0.contentDocument.body').should('not.be.empty').then(cy.wrap).find(\"[href='mentorship']\").eq(0).click();\n// cy.get().its('0.contentDocument.body').should('not.be.empty').then(cy.wrap).find().eq().click()",
+              "err": {},
+              "uuid": "f4eae3e5-522d-4ef5-af8a-8f58474e741f",
+              "parentUUID": "b9d6a89c-8859-4184-a490-37b12582b127",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f4eae3e5-522d-4ef5-af8a-8f58474e741f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4260,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-01-11T06:59:16.160Z",
+    "end": "2025-01-11T06:59:24.619Z",
+    "duration": 8459,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "45103be1-7ade-4e3c-81e2-71f200a826a7",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\Test1.js",
+      "file": "cypress\\integration\\examples\\Test1.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3f35aada-3dda-4b54-9cfa-b4fc5c69796b",
+          "title": "This is my first suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Visits the Rahul Shetty",
+              "fullTitle": "This is my first suite Visits the Rahul Shetty",
+              "timedOut": null,
+              "duration": 4685,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/');\n// cy.get('.search-keyword').type(\"ca\")\ncy.get(landingPage.searchBar).type(\"ca\");\ncy.get(landingPage.productList).find(landingPage.productName).each(function (name) {\n  var textVeg = name.find(landingPage.vegName).text();\n  if (textVeg.includes('Cashews')) {\n    cy.wrap(name).find(landingPage.button).click();\n  }\n});\ncy.get(landingPage.shoppingCart).click();\ncy.get(landingPage.vegName).should('contain', 'Cashews');\ncy.contains(landingPage.proceedToCheckoutText).should('have.text', 'PROCEED TO CHECKOUT').click();\ncy.get(landingPage.cartSection).should('have.attr', 'placeholder');\ncy.contains(landingPage.placeOrderButton).click();\ncy.get(landingPage.wrapper).find(landingPage.label).should('have.text', 'Choose Country');",
+              "err": {},
+              "uuid": "e57d52a8-f81f-454f-b0fd-5f13c47ad3c0",
+              "parentUUID": "3f35aada-3dda-4b54-9cfa-b4fc5c69796b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e57d52a8-f81f-454f-b0fd-5f13c47ad3c0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4685,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
