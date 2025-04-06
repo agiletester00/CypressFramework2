@@ -2,18 +2,16 @@
 # Build a general Node.js project with npm.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
-
 trigger:
 - main
 
 pool:
   vmImage: ubuntu-latest
-  container:cypress/browsers:latest #use latest, not version number
+  container: cypress/browsers:latest # use latest, not version number
 
 steps:
-  -script:
-  npm ci
-  displayName:'Installation'
-  -script
-  npx cypress run --browser chrome
-  displayName: "Run Tests" 
+- script: npm ci
+  displayName: 'Installation'
+
+- script: npx cypress run --browser chrome
+  displayName: "Run Tests"
