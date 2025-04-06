@@ -20,23 +20,29 @@ describe("Swapping of Numbers",()=>{
 
     })
     it("Array print",()=>{
-        let n=[[1,2],[3,2],[4,5]]
+        // let n=[[1,2],[3,2],[4,5]]
         let n1=[2,6,7,8,1,3,5]
         let num=1,index=-1
         //Linear Search
 
-        for(let i=0;i< n1;i++)
+        for(let i=0;i< n1.length;i++)
         {
-            if(num==a[i])
+            if(num==n1[i])
             {
                 index=i;
-            }
-           
-
+                break;
+            }   
         }
-        cy.log("Item is at index "+index)
+        cy.log("Item is at position "+(++index))
+        for(let i of n1)
+            cy.log(i)
+        cy.log(n1)
 
 
     })
+
+    it("")
+
+
 
 })
