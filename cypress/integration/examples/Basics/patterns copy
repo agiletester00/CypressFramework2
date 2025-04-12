@@ -1,0 +1,23 @@
+const text = "The quick brown fox jumps over the lazy dog.";
+const pattern1 = /fox/; // Simple literal pattern
+const pattern2 = /jumps\s\w+/; // Pattern with whitespace and word characters
+const pattern3 = /[aeiou]/g; // Pattern to find any vowel (g flag for global search, though test() will stop at the first match)
+
+console.log(pattern1.test(text)); // Output: true
+console.log(pattern2.test(text)); // Output: true
+console.log(pattern3.test(text)); // Output: true (finds the first vowel 'e')
+
+const text2 = "The quick brown fox and a quick rabbit.";
+const pattern11 = /quick/;
+const pattern22 = /quick/g;
+
+const match1 = text.match(pattern1);
+console.log(match1); // Output: ['quick', index: 4, input: 'The quick brown fox and a quick rabbit.', groups: undefined]
+
+const match2 = text.match(pattern2);
+console.log(match2); // Output: ['quick', 'quick']
+
+const pattern33 = /zebra/;
+const match3 = text.match(pattern33);
+console.log(match3); // Output: null
+

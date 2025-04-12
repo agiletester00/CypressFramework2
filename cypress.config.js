@@ -51,8 +51,8 @@ module.exports = defineConfig({
   reporter: 'cypress-mochawesome-reporter',
   e2e: {
     setupNodeEvents,
-    // specPattern : "cypress/integration/examples/BDD/*.feature"
-     specPattern : "cypress/integration/examples/*.js"
+    specPattern : "cypress/integration/examples/BDD/*.feature"
+    //  specPattern : "cypress/integration/examples/*.js"
 
      //E:\CypressAuto\cypress\integration\examples
   },
